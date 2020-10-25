@@ -19,13 +19,15 @@ public class GameHandler : MonoBehaviour
         Debug.Log("gameOver() function called");
         GameOverCanvas.SetActive(true);
         Time.timeScale = 0;
-        // PlayerPrefs.SetInt("highScore",);
-        // PlayerPrefs.Save();
 
     }
 
     public void replay(){
         SceneManager.LoadScene(0);
+    }
+
+    public void saveGameData(){
+        Debug.Log("Game Data Saved!!");
     }
 
 }
