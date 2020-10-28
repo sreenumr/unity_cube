@@ -8,7 +8,7 @@ public class GameHandler : MonoBehaviour
     public GameObject GameOverCanvas;
     public GameObject PauseScreenCanvas;
     public GameObject PauseCanvas;
-
+    public GameObject InstructionCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -16,18 +16,29 @@ public class GameHandler : MonoBehaviour
         Debug.Log("Game Start");
         GameOverCanvas.SetActive(false);
         PauseScreenCanvas.SetActive(false);
-        Time.timeScale = 1;
+        PauseCanvas.SetActive(false);
+        InstructionCanvas.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void gameOver(){
         Debug.Log("gameOver() function called");
         GameOverCanvas.SetActive(true);
+        PauseCanvas.SetActive(false);
         Time.timeScale = 0;
 
     }
 
     public void replay(){
         SceneManager.LoadScene(0);
+
+    }
+
+    public void startGame(){
+        // SceneManager.LoadScene(0);
+        InstructionCanvas.SetActive(false);
+        PauseCanvas.SetActive(true);
+        Time.timeScale = 1;
 
     }
 
