@@ -31,6 +31,7 @@ public class GameHandler : MonoBehaviour
 
     public void replay(){
         SceneManager.LoadScene(0);
+        InstructionCanvas.SetActive(false);//not working
 
     }
 
