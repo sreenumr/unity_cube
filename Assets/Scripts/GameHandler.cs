@@ -45,6 +45,7 @@ public class GameHandler : MonoBehaviour
 
     public void pauseGame(){
         PauseScreenCanvas.SetActive(true);
+        PauseCanvas.SetActive(false);
         Time.timeScale = 0;
     }
 
