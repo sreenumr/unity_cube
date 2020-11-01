@@ -9,6 +9,7 @@ public class ObstacleSpawner : MonoBehaviour
     private float timer = 0;
     public float height;
 
+
     // Start is called before the first frame update
 
     void Start()

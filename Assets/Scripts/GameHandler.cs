@@ -9,6 +9,10 @@ public class GameHandler : MonoBehaviour
     public GameObject PauseScreenCanvas;
     public GameObject PauseCanvas;
     public GameObject InstructionCanvas;
+    
+    public static float obstacleSpeed = 25f;
+
+    private int scoreCheck = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +25,11 @@ public class GameHandler : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    void Update(){
+        if (Score.score%scoreCheck==0 && Score.score != 0){
+            obstacleSpeed += 0.1f;
+        }
+    }
     public void gameOver(){
         Debug.Log("gameOver() function called");
         GameOverCanvas.SetActive(true);
