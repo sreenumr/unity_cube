@@ -6,6 +6,7 @@ TagManager:
   tags:
   - YourScore
   - GameHighScore
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Background
   - Player
   - Platform
-  - 
+  - Obstacle
   - 
   - 
   - 
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 1407049353
+    locked: 0
+  - name: Obstacle
+    uniqueID: 1305653287
     locked: 0

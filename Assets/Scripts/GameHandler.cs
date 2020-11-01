@@ -16,6 +16,7 @@ public class GameHandler : MonoBehaviour
     private int scoreCheck = 10;
     public GameObject YourScoreText;
     public GameObject GameHighScoreText;
+    public GameObject[] Obstacles;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,21 +26,22 @@ public class GameHandler : MonoBehaviour
         PauseScreenCanvas.SetActive(false);
         PauseCanvas.SetActive(false);
         InstructionCanvas.SetActive(true);
+
+
         Time.timeScale = 0;
     }
 
     void Update(){
         if (Score.score%scoreCheck==0 && Score.score != 0){
-            obstacleSpeed += 0.1f;
+            obstacleSpeed += 1f;
         }
     }
     public void gameOver(){
         Debug.Log("gameOver() function called");
-        Debug.Log("Your Score : " + YourScoreText.GetComponent<UnityEngine.UI.Text>().text);
-        Debug.Log("High Score : " + GameHighScoreText.GetComponent<UnityEngine.UI.Text>().text);
 
         YourScoreText.GetComponent<UnityEngine.UI.Text>().text = "Your Score : " + Score.score.ToString();
         GameHighScoreText.GetComponent<UnityEngine.UI.Text>().text = "High Score : " + HighScore.highScore.ToString();
+
         // System.Threading.Thread.Sleep(3000);
         GameOverCanvas.SetActive(true);
         PauseCanvas.SetActive(false);
@@ -47,7 +49,23 @@ public class GameHandler : MonoBehaviour
 
     }
 
+    public void resetGame(){
+        
+        Obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
+
+        for(var i = 0 ; i < Obstacles.Length ; i ++)
+            {
+                Destroy(Obstacles[i]);
+            }
+
+        obstacleSpeed = 25f;
+
+    }
+
     public void replay(){
+
+        resetGame();
+
         SceneManager.LoadScene(0);
         InstructionCanvas.SetActive(false);//not working
 
@@ -55,6 +73,7 @@ public class GameHandler : MonoBehaviour
 
     public void startGame(){
         // SceneManager.LoadScene(0);
+        obstacleSpeed = 25f;
         InstructionCanvas.SetActive(false);
         PauseCanvas.SetActive(true);
         Time.timeScale = 1;
