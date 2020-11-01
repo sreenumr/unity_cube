@@ -9,14 +9,17 @@ public class GameHandler : MonoBehaviour
     public GameObject PauseScreenCanvas;
     public GameObject PauseCanvas;
     public GameObject InstructionCanvas;
-    
+
+
     public static float obstacleSpeed = 25f;
 
     private int scoreCheck = 10;
-
+    public GameObject YourScoreText;
+    public GameObject GameHighScoreText;
     // Start is called before the first frame update
     void Start()
     {
+
         Debug.Log("Game Start");
         GameOverCanvas.SetActive(false);
         PauseScreenCanvas.SetActive(false);
@@ -32,6 +35,12 @@ public class GameHandler : MonoBehaviour
     }
     public void gameOver(){
         Debug.Log("gameOver() function called");
+        Debug.Log("Your Score : " + YourScoreText.GetComponent<UnityEngine.UI.Text>().text);
+        Debug.Log("High Score : " + GameHighScoreText.GetComponent<UnityEngine.UI.Text>().text);
+
+        YourScoreText.GetComponent<UnityEngine.UI.Text>().text = "Your Score : " + Score.score.ToString();
+        GameHighScoreText.GetComponent<UnityEngine.UI.Text>().text = "High Score : " + HighScore.highScore.ToString();
+        // System.Threading.Thread.Sleep(3000);
         GameOverCanvas.SetActive(true);
         PauseCanvas.SetActive(false);
         Time.timeScale = 0;
