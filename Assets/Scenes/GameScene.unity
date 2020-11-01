@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &84431951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b6349d08a5335cd4aa534282435d11cc, type: 3}
     m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
@@ -388,7 +388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &266967457
 RectTransform:
   m_ObjectHideFlags: 0
@@ -823,7 +823,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679725749}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.1, y: 8.7, z: 0}
+  m_LocalPosition: {x: -45.3, y: 8.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1086940187}
@@ -874,7 +874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680554246}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -89.5, y: 15, z: 0}
+  m_LocalPosition: {x: -93, y: 15, z: 0}
   m_LocalScale: {x: 7.916322, y: 7.916322, z: 0.75201106}
   m_Children: []
   m_Father: {fileID: 1086940187}
@@ -1219,8 +1219,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006122915}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -54.94461, y: -10.375432, z: 1366.4062}
-  m_LocalScale: {x: 31.45587, y: 31.45587, z: 31.45587}
+  m_LocalPosition: {x: -122.3, y: -10.375432, z: 1366.4062}
+  m_LocalScale: {x: 10.223473, y: 31.45587, z: 31.45587}
   m_Children: []
   m_Father: {fileID: 1688838200}
   m_RootOrder: 0
@@ -1402,7 +1402,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b6349d08a5335cd4aa534282435d11cc, type: 3}
     m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
@@ -1951,7 +1951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1764243435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2059,8 +2059,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800466714}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.4, y: -37.5, z: 0}
-  m_LocalScale: {x: 40.997215, y: 27.709072, z: 11.241894}
+  m_LocalPosition: {x: -50.3, y: -38.1, z: 0}
+  m_LocalScale: {x: 9.993277, y: 27.709072, z: 11.241894}
   m_Children: []
   m_Father: {fileID: 458194618}
   m_RootOrder: 0
