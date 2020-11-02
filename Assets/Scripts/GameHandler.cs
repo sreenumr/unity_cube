@@ -27,13 +27,19 @@ public class GameHandler : MonoBehaviour
         PauseCanvas.SetActive(false);
         InstructionCanvas.SetActive(true);
 
-
         Time.timeScale = 0;
+
+
     }
 
     void Update(){
+                
+        if(  Input.GetTouch(0).phase == TouchPhase.Began){
+            startGame();
+         }
+
         if (Score.score%scoreCheck==0 && Score.score != 0){
-            obstacleSpeed += 1f;
+            obstacleSpeed += 0.05f;
         }
     }
     public void gameOver(){
