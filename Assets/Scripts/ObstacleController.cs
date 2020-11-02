@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ObstacleController : MonoBehaviour
 {
@@ -12,9 +13,13 @@ public class ObstacleController : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     private float speed;
 
+    private int[] randInt = {-1,1};
     void Start()
     {
+        System.Random random = new System.Random();
         this.speed = GameHandler.obstacleSpeed;
+        this.ySpeed *=  randInt[random.Next(0,randInt.Length)];
+        
     }
 
     // Update is called once per frame
