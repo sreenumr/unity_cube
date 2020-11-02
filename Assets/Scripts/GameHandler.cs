@@ -17,6 +17,7 @@ public class GameHandler : MonoBehaviour
     public GameObject YourScoreText;
     public GameObject GameHighScoreText;
     public GameObject[] Obstacles;
+    private bool isGameStart = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +33,13 @@ public class GameHandler : MonoBehaviour
 
     }
 
+    
+
     void Update(){
-                
-        if(  Input.GetTouch(0).phase == TouchPhase.Began){
+
+        
+        if(  !isGameStart && (Input.GetTouch(0).phase == TouchPhase.Began) ){
+            isGameStart = true;
             startGame();
          }
 
@@ -94,6 +99,7 @@ public class GameHandler : MonoBehaviour
 
     public void resumeGame(){
         PauseScreenCanvas.SetActive(false);
+        PauseCanvas.SetActive(true);
         Time.timeScale = 1;
     }
 
