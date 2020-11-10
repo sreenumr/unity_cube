@@ -38,7 +38,7 @@ public class GameHandler : MonoBehaviour
     void Update(){
 
         
-        if(  !isGameStart && (Input.GetTouch(0).phase == TouchPhase.Began) ){
+        if(  !isGameStart &&(  Input.GetTouch(0).phase == TouchPhase.Began)  ){
             isGameStart = true;
             startGame();
          }

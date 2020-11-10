@@ -8,8 +8,8 @@ public class ObstacleController : MonoBehaviour
     // Start is called before the first frame update
     
     [SerializeField]public float ySpeed = 2f;
-    public float maxHeight;
-    public float minHeight;
+    private float maxHeight = 45;
+    private float minHeight = -30;
     private Rigidbody2D rigidbody2d;
     private float speed;
 
@@ -19,7 +19,7 @@ public class ObstacleController : MonoBehaviour
         System.Random random = new System.Random();
         this.speed = GameHandler.obstacleSpeed;
         this.ySpeed *=  randInt[random.Next(0,randInt.Length)];
-        
+        Debug.Log("Screen :: " + Screen.height);
     }
 
     // Update is called once per frame
@@ -34,9 +34,9 @@ public class ObstacleController : MonoBehaviour
 
         //increase speed every n scor
 
-        // if(transform.position.y > maxHeight || transform.position.y < minHeight){
-            // ySpeed *= -1;
-        // }
+        if(transform.position.y > maxHeight || transform.position.y < minHeight){
+            ySpeed *= -1;
+        }
 		
 
     }
