@@ -34,11 +34,13 @@ public class ObstacleController : MonoBehaviour
 
         //increase speed every n scor
 
-        if(transform.position.y > maxHeight || transform.position.y < minHeight){
-            ySpeed *= -1;
-        }
+        // if(transform.position.y > maxHeight || transform.position.y < minHeight){
+            // ySpeed *= -1;
+        // }
+		
 
     }
+
 
     void Update(){
 

@@ -16,7 +16,7 @@ public class GameHandler : MonoBehaviour
     private int scoreCheck = 10;
     public GameObject YourScoreText;
     public GameObject GameHighScoreText;
-    public GameObject[] Obstacles;
+    private GameObject[] Obstacles;
     private bool isGameStart = false;
     // Start is called before the first frame update
     void Start()
