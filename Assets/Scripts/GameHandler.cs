@@ -10,8 +10,8 @@ public class GameHandler : MonoBehaviour
     public GameObject PauseCanvas;
     public GameObject InstructionCanvas;
 
-
-    public static float obstacleSpeed = 25f;
+    public static float obstacleXSpeed = 25f;
+    public static float obstacleYSpeed = 15f;
 
     private int scoreCheck = 10;
     public GameObject YourScoreText;
@@ -44,9 +44,11 @@ public class GameHandler : MonoBehaviour
          }
 
         if (Score.score%scoreCheck==0 && Score.score != 0){
-            obstacleSpeed += 0.05f;
+            obstacleXSpeed += 0.05f;
+            obstacleYSpeed += 0.05f;
         }
     }
+
     public void gameOver(){
         Debug.Log("gameOver() function called");
 
@@ -69,7 +71,8 @@ public class GameHandler : MonoBehaviour
                 Destroy(Obstacles[i]);
             }
 
-        obstacleSpeed = 25f;
+        obstacleXSpeed = 25f;
+        obstacleYSpeed = 15f;
 
     }
 
@@ -84,7 +87,8 @@ public class GameHandler : MonoBehaviour
 
     public void startGame(){
         // SceneManager.LoadScene(0);
-        obstacleSpeed = 25f;
+        obstacleXSpeed = 25f;
+        obstacleYSpeed = 25f;
         InstructionCanvas.SetActive(false);
         PauseCanvas.SetActive(true);
         Time.timeScale = 1;
