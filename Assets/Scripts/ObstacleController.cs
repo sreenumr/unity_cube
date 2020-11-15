@@ -18,7 +18,7 @@ public class ObstacleController : MonoBehaviour
     void FixedUpdate()
     {
         transform.position += Vector3.left * xSpeed * Time.deltaTime;
-        Debug.Log(transform.position.y);
+        // Debug.Log(transform.position.y);
     }
 
 
