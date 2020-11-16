@@ -40,9 +40,6 @@ public class PlayerController : MonoBehaviour
 
     void HandlePlayerMovement(){
 
-        moveSpeed = 10f;
-        jumpSpeed = 50f;
-
         if(  Input.GetTouch(0).phase == TouchPhase.Began  && rigidbody2d.velocity.y <= 0f ){
             // playerAnimator.SetBool("isJumping",true);
             rigidbody2d.gravityScale = 0f;
@@ -77,7 +74,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision){
         gameHandler.gameOver();
-
         Debug.Log(collision);
     }
 

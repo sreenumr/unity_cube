@@ -143,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &84431951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &266967457
 RectTransform:
   m_ObjectHideFlags: 0
@@ -600,7 +600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &413575522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1282,6 +1282,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1688525116}
+        m_TargetAssemblyTypeName: AdManager, Assembly-CSharp
+        m_MethodName: displayVideoAD
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &664285683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,7 +1437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameHandler: {fileID: 1086940186}
-  jumpSpeed: 0
+  jumpSpeed: 60
   moveSpeed: 0
   groundCheckHeight: 0
   platformLayerMask:
@@ -1628,7 +1640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &814272913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1962,7 +1974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &998044804
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2372,6 +2384,7 @@ MonoBehaviour:
   PauseScreenCanvas: {fileID: 266967456}
   PauseCanvas: {fileID: 814272912}
   InstructionCanvas: {fileID: 84431950}
+  adManager: {fileID: 1688525116}
   YourScoreText: {fileID: 617308606}
   GameHighScoreText: {fileID: 611846586}
 --- !u!4 &1086940187
@@ -2865,7 +2878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1634427434
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3041,7 +3054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1764243435
 MonoBehaviour:
   m_ObjectHideFlags: 0

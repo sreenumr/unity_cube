@@ -10,6 +10,8 @@ public class GameHandler : MonoBehaviour
     public GameObject PauseCanvas;
     public GameObject InstructionCanvas;
 
+    public AdManager adManager;
+
     public static float obstacleXSpeed = 25f;
     public static float obstacleYSpeed = 15f;
 
@@ -21,7 +23,7 @@ public class GameHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        adManager.initializeAd();
         Debug.Log("Game Start");
         GameOverCanvas.SetActive(false);
         PauseScreenCanvas.SetActive(false);
@@ -29,7 +31,6 @@ public class GameHandler : MonoBehaviour
         InstructionCanvas.SetActive(true);
 
         Time.timeScale = 0;
-
 
     }
 
@@ -59,6 +60,7 @@ public class GameHandler : MonoBehaviour
         GameOverCanvas.SetActive(true);
         PauseCanvas.SetActive(false);
         Time.timeScale = 0;
+        adManager.displayVideoAD();
 
     }
 

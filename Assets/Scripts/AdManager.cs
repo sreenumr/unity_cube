@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
-public class Monetization : MonoBehaviour, IUnityAdsListener
+public class AdManager : MonoBehaviour, IUnityAdsListener
 {
     // Start is called before the first frame update
     string GooglePlayID  = "3902621";
@@ -12,10 +12,13 @@ public class Monetization : MonoBehaviour, IUnityAdsListener
     
     void Start()
     {
-        Advertisement.AddListener (this);
-        Advertisement.Initialize (GooglePlayID, testMode);
+
     }
 
+    public void initializeAd(){
+        Advertisement.AddListener (this);
+        Advertisement.Initialize (GooglePlayID, testMode);
+    }   
     // Update is called once per frame
     public void ShowInterstitialAd() {
         // Check if UnityAds ready before calling Show method:
@@ -28,6 +31,9 @@ public class Monetization : MonoBehaviour, IUnityAdsListener
     }
 
     public void displayVideoAD(){
+        // while(!Advertisement.IsReady ()){
+        //     //do nothing
+        // }
         Advertisement.Show(myPlacementId);
     }
 
