@@ -15,6 +15,9 @@ public class GameHandler : MonoBehaviour
     public static float obstacleXSpeed = 25f;
     public static float obstacleYSpeed = 15f;
 
+    private float maxObstacleXSpeed = 50f;
+    private float maxObstacleYSpeed = 40f;
+
     private int scoreCheck = 10;
     public GameObject YourScoreText;
     public GameObject GameHighScoreText;
@@ -44,7 +47,10 @@ public class GameHandler : MonoBehaviour
             startGame();
          }
 
-        if (Score.score%scoreCheck==0 && Score.score != 0){
+        if (Score.score%scoreCheck==0 && Score.score != 0 
+                && obstacleXSpeed <= maxObstacleXSpeed 
+                && obstacleYSpeed <= maxObstacleYSpeed){
+
             obstacleXSpeed += 0.05f;
             obstacleYSpeed += 0.05f;
         }

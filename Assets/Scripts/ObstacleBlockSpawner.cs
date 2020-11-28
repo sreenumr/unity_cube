@@ -15,7 +15,7 @@ public class ObstacleBlockSpawner : MonoBehaviour
     {
                 
         GameObject newObstacle = Instantiate(obstacle);
-        newObstacle.transform.position = transform.position + new Vector3(0,Random.Range(-height,height),0);
+        // newObstacle.transform.position = transform.position + new Vector3(0,Random.Range(-height,height),0);
         Destroy(newObstacle,5);
     }
 
@@ -29,7 +29,7 @@ public class ObstacleBlockSpawner : MonoBehaviour
         if(timer > maxTime){
             
             GameObject newObstacle = Instantiate(obstacle);
-            newObstacle.transform.position = transform.position + new Vector3(0,Random.Range(-height,height),0);
+            // newObstacle.transform.position = transform.position + new Vector3(0,Random.Range(-height,height),0);
             Destroy(newObstacle,5);
             timer = 0;
         }
