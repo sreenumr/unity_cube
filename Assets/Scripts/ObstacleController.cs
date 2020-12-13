@@ -7,7 +7,6 @@ public class ObstacleController : MonoBehaviour
 {
     // Start is called before the first frame update
     private float xSpeed;
-
     void Start()
     {
         this.xSpeed = GameHandler.obstacleXSpeed;
