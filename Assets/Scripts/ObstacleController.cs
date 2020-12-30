@@ -7,10 +7,11 @@ public class ObstacleController : MonoBehaviour
 {
     // Start is called before the first frame update
     private float xSpeed;
+
     void Start()
     {
         this.xSpeed = GameHandler.obstacleXSpeed;
-        Debug.Log("Screen :: " + Screen.height);
+        // Debug.Log("Screen :: " + Screen.height);
     }
 
     // Update is called once per frame

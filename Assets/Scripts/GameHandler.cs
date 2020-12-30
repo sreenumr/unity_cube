@@ -18,6 +18,8 @@ public class GameHandler : MonoBehaviour
     private float maxObstacleXSpeed = 50f;
     private float maxObstacleYSpeed = 40f;
 
+    private float obstacleRotationSpeed = 10f;
+
     private int scoreCheck = 10;
     public GameObject YourScoreText;
     public GameObject GameHighScoreText;
@@ -27,7 +29,7 @@ public class GameHandler : MonoBehaviour
     void Start()
     {
         adManager.initializeAd();
-        Debug.Log("Game Start");
+        // Debug.Log("Game Start");
         GameOverCanvas.SetActive(false);
         PauseScreenCanvas.SetActive(false);
         PauseCanvas.SetActive(false);

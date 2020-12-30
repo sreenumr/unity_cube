@@ -9,6 +9,10 @@ public class BlockMovement : MonoBehaviour
     private float maxHeight = 45;
     private float minHeight = -30;
     private int[] randInt = {-1,1};
+    private int rotationSpeed;
+    private int maxRotationSpeed = -10;
+    private int multiplier = 20; 
+    private float zRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +21,25 @@ public class BlockMovement : MonoBehaviour
         this.ySpeed= GameHandler.obstacleYSpeed;
         System.Random random = new System.Random();
         this.ySpeed *=  randInt[random.Next(0,randInt.Length)];
+        maxRotationSpeed *= multiplier;
+        this.rotationSpeed = Random.Range(-maxRotationSpeed,maxRotationSpeed);
+        Debug.Log("[INFO] Rotation Speed " + rotationSpeed);
+        
     }
 
     // Update is called once per frame
+
+    void Update(){
+        // Debug.Log("[INFO] Rotation " + transform.rotation);
+    }
+
     void FixedUpdate()
-    {
+    {   
+
+        zRotation +=  Time.deltaTime * rotationSpeed;
+        Debug.Log("[INFO] Rotation " + transform.rotation);
+    
+        transform.rotation = Quaternion.Euler(0,0,zRotation);
         transform.position -= Vector3.up * ySpeed * Time.deltaTime;
     }
 
