@@ -11,7 +11,7 @@ public class BlockMovement : MonoBehaviour
     private int[] randInt = {-1,1};
     private int rotationSpeed;
     private int maxRotationSpeed = -10;
-    private int multiplier = 20; 
+    private int multiplier = 35; 
     private float zRotation;
 
     // Start is called before the first frame update
