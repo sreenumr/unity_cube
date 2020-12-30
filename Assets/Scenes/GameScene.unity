@@ -1865,7 +1865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameHandler: {fileID: 1086940186}
-  jumpSpeed: 60
+  jumpSpeed: 40
   moveSpeed: 0
   groundCheckHeight: 0
   platformLayerMask:
