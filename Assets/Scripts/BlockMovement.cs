@@ -14,6 +14,8 @@ public class BlockMovement : MonoBehaviour
     private int multiplier = 35; 
     private float zRotation;
 
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class BlockMovement : MonoBehaviour
         this.rotationSpeed = Random.Range(-maxRotationSpeed,maxRotationSpeed);
         Debug.Log("[INFO] Rotation Speed " + rotationSpeed);
         
+        audioSource = GetComponent<AudioSource> ();
+
     }
 
     // Update is called once per frame
@@ -48,6 +52,8 @@ public class BlockMovement : MonoBehaviour
         if(collision.gameObject.layer == 10){ //Int value of layer from Layer Dropdown
             ySpeed *= -1;
         }
+
+        audioSource.Play();
 
         Debug.Log("Obstacle block collided " + collision);
     }

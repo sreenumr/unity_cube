@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private Sprite jumpSprite;
+    private AudioSource audioSource;
+
+    public AudioClip collisionAudio;
+
     void Start()
     {
     
@@ -24,6 +28,8 @@ public class PlayerController : MonoBehaviour
         boxCollider2d = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource> ();
+        audioSource.Play();
 
     }
 
@@ -34,11 +40,10 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate(){
-
-
     }
 
     void HandlePlayerMovement(){
+
 
         if(  Input.GetTouch(0).phase == TouchPhase.Began  && rigidbody2d.velocity.y <= 0f ){
             // playerAnimator.SetBool("isJumping",true);
@@ -73,6 +78,9 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision){
+        audioSource.Stop();
+        audioSource.clip = collisionAudio;
+        audioSource.PlayOneShot(collisionAudio);
         gameHandler.gameOver();
         Debug.Log(collision);
     }
