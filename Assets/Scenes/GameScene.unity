@@ -1957,6 +1957,7 @@ MonoBehaviour:
     m_Bits: 0
   playerAnimator: {fileID: 0}
   jumpSprite: {fileID: 0}
+  collisionAudio: {fileID: 8300000, guid: 000ca302cd7c95947a4139e6df90929a, type: 3}
 --- !u!50 &827652724
 Rigidbody2D:
   serializedVersion: 4
@@ -1989,8 +1990,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 89465be17043e384da1e5d43d3437562, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2126,7 +2127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &960078161
 Transform:
   m_ObjectHideFlags: 0

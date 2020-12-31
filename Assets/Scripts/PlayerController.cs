@@ -39,8 +39,6 @@ public class PlayerController : MonoBehaviour
         HandlePlayerMovement();
     }
 
-    void FixedUpdate(){
-    }
 
     void HandlePlayerMovement(){
 

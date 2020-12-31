@@ -25,6 +25,11 @@ public class GameHandler : MonoBehaviour
     public GameObject GameHighScoreText;
     private GameObject[] Obstacles;
     private bool isGameStart = false;
+
+    void Awake(){
+        AudioListener.pause = true;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +39,6 @@ public class GameHandler : MonoBehaviour
         PauseScreenCanvas.SetActive(false);
         PauseCanvas.SetActive(false);
         InstructionCanvas.SetActive(true);
-
         Time.timeScale = 0;
 
     }
@@ -96,6 +100,7 @@ public class GameHandler : MonoBehaviour
     }
 
     public void startGame(){
+        AudioListener.pause = false;
         // SceneManager.LoadScene(0);
         obstacleXSpeed = 25f;
         obstacleYSpeed = 25f;
@@ -106,12 +111,14 @@ public class GameHandler : MonoBehaviour
     }
 
     public void pauseGame(){
+        AudioListener.pause = true;
         PauseScreenCanvas.SetActive(true);
         PauseCanvas.SetActive(false);
         Time.timeScale = 0;
     }
 
     public void resumeGame(){
+        AudioListener.pause = false;
         PauseScreenCanvas.SetActive(false);
         PauseCanvas.SetActive(true);
         Time.timeScale = 1;
