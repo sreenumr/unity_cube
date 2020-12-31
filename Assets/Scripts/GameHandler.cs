@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameHandler : MonoBehaviour
 {
@@ -21,10 +22,17 @@ public class GameHandler : MonoBehaviour
     private float obstacleRotationSpeed = 10f;
 
     private int scoreCheck = 10;
+
     public GameObject YourScoreText;
     public GameObject GameHighScoreText;
+    public GameObject toggleMusicButton;
+
     private GameObject[] Obstacles;
     private bool isGameStart = false;
+    private bool isMusicOn = true;
+
+    public Sprite musicOnImage;
+    public Sprite musicOffImage;
 
     void Awake(){
         AudioListener.pause = true;
@@ -40,6 +48,8 @@ public class GameHandler : MonoBehaviour
         PauseCanvas.SetActive(false);
         InstructionCanvas.SetActive(true);
         Time.timeScale = 0;
+
+        setIcons();
 
     }
 
@@ -124,8 +134,32 @@ public class GameHandler : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void toggleMusic(){
+
+        if(isMusicOn){
+            toggleMusicButton.GetComponent<Image>().sprite = musicOffImage;
+            isMusicOn = false;
+            AudioListener.volume = 0f;
+
+        }
+        else{
+            toggleMusicButton.GetComponent<Image>().sprite = musicOnImage;
+            isMusicOn = true;
+            AudioListener.volume = 1f;
+        }
+    }
+
     public void saveGameData(){
         Debug.Log("Game Data Saved!!");
+    }
+
+    public void setIcons(){
+        if(AudioListener.volume == 0f){
+            toggleMusicButton.GetComponent<Image>().sprite = musicOffImage;
+        }
+        else if(AudioListener.volume == 1f){
+            toggleMusicButton.GetComponent<Image>().sprite = musicOnImage;
+        }
     }
 
 }
