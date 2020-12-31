@@ -26,6 +26,7 @@ public class GameHandler : MonoBehaviour
     public GameObject YourScoreText;
     public GameObject GameHighScoreText;
     public GameObject toggleMusicButton;
+    public GameObject musicText;
 
     private GameObject[] Obstacles;
     private bool isGameStart = false;
@@ -138,12 +139,14 @@ public class GameHandler : MonoBehaviour
 
         if(isMusicOn){
             toggleMusicButton.GetComponent<Image>().sprite = musicOffImage;
+            musicText.GetComponent<UnityEngine.UI.Text>().text = "Sound : off";
             isMusicOn = false;
             AudioListener.volume = 0f;
 
         }
         else{
             toggleMusicButton.GetComponent<Image>().sprite = musicOnImage;
+            musicText.GetComponent<UnityEngine.UI.Text>().text = "Sound : on";
             isMusicOn = true;
             AudioListener.volume = 1f;
         }
@@ -156,9 +159,11 @@ public class GameHandler : MonoBehaviour
     public void setIcons(){
         if(AudioListener.volume == 0f){
             toggleMusicButton.GetComponent<Image>().sprite = musicOffImage;
+            musicText.GetComponent<UnityEngine.UI.Text>().text = "Sound : off";
         }
         else if(AudioListener.volume == 1f){
             toggleMusicButton.GetComponent<Image>().sprite = musicOnImage;
+            musicText.GetComponent<UnityEngine.UI.Text>().text = "Sound : on";
         }
     }
 
