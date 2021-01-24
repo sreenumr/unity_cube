@@ -33,10 +33,6 @@ public class BlockMovement : MonoBehaviour
 
     // Update is called once per frame
 
-    void Update(){
-        // Debug.Log("[INFO] Rotation " + transform.rotation);
-    }
-
     void FixedUpdate()
     {   
 

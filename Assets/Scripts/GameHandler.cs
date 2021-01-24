@@ -16,8 +16,8 @@ public class GameHandler : MonoBehaviour
     public static float obstacleXSpeed = 25f;
     public static float obstacleYSpeed = 15f;
 
-    private float maxObstacleXSpeed = 50f;
-    private float maxObstacleYSpeed = 40f;
+    private float maxObstacleXSpeed = 60f;
+    private float maxObstacleYSpeed = 45f;
 
     private float obstacleRotationSpeed = 10f;
 

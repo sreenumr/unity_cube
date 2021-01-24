@@ -7,7 +7,7 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
 {
     // Start is called before the first frame update
     string GooglePlayID  = "3902621";
-    bool testMode = true;
+    bool testMode = false;
     string myPlacementId = "rewardedVideo";
     
     void Start()

@@ -7,15 +7,15 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     public GameHandler gameHandler;
     private Rigidbody2D rigidbody2d;
-    private BoxCollider2D boxCollider2d;
-    private SpriteRenderer spriteRenderer;
-    private bool facingRight = true;
+    // private BoxCollider2D boxCollider2d;
+    // private SpriteRenderer spriteRenderer;
+    // private bool facingRight = true;
     [SerializeField] private float jumpSpeed;
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float groundCheckHeight;
-    [SerializeField] private LayerMask platformLayerMask;
-    [SerializeField] private Animator playerAnimator;
-    [SerializeField] private Sprite jumpSprite;
+    // [SerializeField] private float groundCheckHeight;
+    // [SerializeField] private LayerMask platformLayerMask;
+    // [SerializeField] private Animator playerAnimator;
+    // [SerializeField] private Sprite jumpSprite;
     private AudioSource audioSource;
 
     public AudioClip collisionAudio;
@@ -25,9 +25,8 @@ public class PlayerController : MonoBehaviour
     
         rigidbody2d = GetComponent<Rigidbody2D>();
         rigidbody2d.freezeRotation = true;
-        boxCollider2d = GetComponent<BoxCollider2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        playerAnimator = GetComponent<Animator>();
+        // boxCollider2d = GetComponent<BoxCollider2D>();
+        // spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource> ();
         audioSource.Play();
 
@@ -66,14 +65,14 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    bool isGrounded(){
+    // bool isGrounded(){
 
-        groundCheckHeight = 0.01f;
+    //     groundCheckHeight = 0.01f;
 
-        RaycastHit2D raycastHit2d = Physics2D.BoxCast(boxCollider2d.bounds.center,boxCollider2d.bounds.size,0,Vector2.down,groundCheckHeight,platformLayerMask);
-        // Debug.Log(raycastHit2d.collider);
-        return raycastHit2d.collider != null;
-    }
+    //     RaycastHit2D raycastHit2d = Physics2D.BoxCast(boxCollider2d.bounds.center,boxCollider2d.bounds.size,0,Vector2.down,groundCheckHeight,platformLayerMask);
+    //     // Debug.Log(raycastHit2d.collider);
+    //     return raycastHit2d.collider != null;
+    // }
 
     private void OnCollisionEnter2D(Collision2D collision){
         audioSource.Stop();
